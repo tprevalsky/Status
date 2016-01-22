@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="Status.ucStatus"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Status"
+             mc:Ignorable="d" 
+             d:DesignHeight="242" d:DesignWidth="780">
+    <Grid Name="m_grid">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="117"/>
+            <ColumnDefinition MinWidth="123"/>
+            <ColumnDefinition MinWidth="422"/>
+            <ColumnDefinition MinWidth="117"/>
+        </Grid.ColumnDefinitions>
+
+        <Image x:Name="image" HorizontalAlignment="Center" Height="100" Source="{Binding theImage}"
+               VerticalAlignment="Center" Width="100" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0"  />
+
+        <Label x:Name="lbLocalAlias" Content="Local Alias:" HorizontalContentAlignment="Right" 
+               Height="32" VerticalAlignment="Center"
+               FontSize="14.667" Grid.Row="0" Grid.Column="1" />
+        <TextBox x:Name="tbLocalAlias"  IsReadOnly="True"
+                 VerticalContentAlignment="Center"  FontSize="14.667" 
+              Text="{Binding localAlias}" Grid.Row="0"  Grid.Column="2" Grid.ColumnSpan="2" Height="32"  />
+
+        <Label x:Name="lbNetAlias" Content="Network Alias:" HorizontalContentAlignment="Right" Height="32" 
+             
+               VerticalAlignment="Center" FontSize="14.667"
+               Grid.Row="1" Grid.Column="1" />
+        <TextBox x:Name="tbNetAlias" IsReadOnly="True"
+                    Height="32" VerticalAlignment="Center"
+                  VerticalContentAlignment="Center"  FontSize="14.667"
+              Text="{Binding netAlias}"   Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2"  />
+
+        <Label x:Name="lbLastAction" Content="Last Action:" HorizontalContentAlignment="Right" Height="32" 
+        	VerticalAlignment="Center" FontSize="14.667" Grid.Column="0"  Grid.Row="2" Margin="0,24.667,0.333,24" />
+        <TextBox x:Name="tbLastAction"  IsReadOnly="True"
+        	VerticalContentAlignment="Center" FontSize="14.667"    Height="32" VerticalAlignment="Center"
+        	Text="{Binding lastAction}"  Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"  />
+        <TextBox x:Name="tblastDateTime" IsReadOnly="True"
+                    Height="32" VerticalAlignment="Center"
+        	VerticalContentAlignment="Center"  FontSize="14.667"
+        	Text="{Binding lastDateTime}"  Grid.Row="2" Grid.Column="3"  />
+
+
+
+    </Grid>
+</UserControl>
