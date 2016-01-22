@@ -3,7 +3,7 @@
 using System.Windows.Media.Imaging;
 namespace Status
 {
-    public class DataStub
+    public class DataStub_a
     {
         private string _localAlias = "Local Alias sample data";
         public string localAlias
